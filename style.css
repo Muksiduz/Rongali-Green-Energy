@@ -4,8 +4,21 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+.main-container {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+}
+.sidebar {
+  position: fixed;
+  top: 85vh;
+  right: 25px;
+  z-index: 100;
+}
 .caro {
-  height: 80vh;
+  height: 100%;
 }
 .head-div {
   width: 60%;
@@ -48,6 +61,7 @@ a {
   background: rgba(0, 0, 0, 0.5); /* Black tint with 50% opacity */
 }
 .navbar {
+  width: 100%;
   padding-left: 200px;
   padding-right: 200px;
   padding-top: 20px;
@@ -146,21 +160,12 @@ a {
 #contactUs {
   margin-top: 100px;
 }
-.sidebars {
-  position: fixed;
-  bottom: 10px;
-  right: 20px;
-}
+
 .side-log {
   width: 70px;
   height: 70px;
 }
-.side-bar {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin: 0px;
-}
+
 .form {
   position: absolute;
   left: 50%;
@@ -209,12 +214,7 @@ label {
   font-weight: bolder;
   width: 200px;
 }
-.second-input {
-  width: 200px;
-  height: 60px;
-  border-radius: 14px;
-  border: 1px solid gray;
-}
+
 .input-cards-low {
   display: flex;
   align-items: center;
@@ -251,96 +251,19 @@ label {
   align-items: center;
   justify-content: center;
 }
-.phone {
-  background: black;
-  border: 2px solid white;
-}
+
 .hambur {
   display: none;
 }
 .second-setion {
   background-color: #f0dddd;
   margin-top: 450px;
-  width: 100%;
-  padding: 30px 200px;
+  width: 90%;
 }
 input::placeholder {
   font-size: 22px;
   padding-left: 20px;
 }
-
-@media (max-width: 768px) {
-  .topNavigation {
-    display: none;
-  }
-  .nav-contents {
-    display: none;
-  }
-
-  .hambur {
-    display: block;
-  }
-  .navbar {
-    padding: 20px;
-    height: 100px;
-  }
-  .head-div {
-    width: 100%;
-    padding: 0 20px;
-  }
-  .hero-heading {
-    font-size: 25px;
-    letter-spacing: 5px;
-  }
-  .text-light {
-    font-size: 35px;
-  }
-  .form {
-    position: absolute;
-    top: 82%;
-    width: 96%;
-    background: white;
-    padding: 30px;
-    border-radius: 24px;
-    border: 1px solid green;
-    z-index: 10;
-    height: fit-content;
-  }
-  .caro-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .form > h1 {
-    font-size: 35px;
-    font-weight: bold;
-    margin-bottom: 25px;
-    text-align: center;
-  }
-  .input-cards,
-  .input-cards-low {
-    display: flex;
-    flex-direction: column;
-  }
-  .input-cards > div,
-  .input-cards-low > div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .first-input,
-  .second-input {
-    width: 100%;
-  }
-  .btn-form {
-    width: 100%;
-    margin-top: 20px;
-  }
-  .sidebars {
-    z-index: 100;
-  }
-}
-
 /* card css  */
 .card {
   background: #fff;
@@ -410,7 +333,6 @@ input::placeholder {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-
   gap: 50px;
   margin-bottom: 100px;
   padding-top: 100px;
@@ -421,22 +343,7 @@ input::placeholder {
   font-weight: bolder;
   letter-spacing: 5px;
 }
-@media (max-width: 768px) {
-  .second-setion {
-    position: relative;
-    margin-top: 400px;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding: 100px;
-    height: auto;
-  }
-  .allCards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
+
 .container {
   width: 100%;
 }
@@ -504,6 +411,143 @@ input::placeholder {
   font-weight: bolder;
   letter-spacing: 5px;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .main-container {
+    width: 100%;
+
+    /* overflow: hidden; */
+  }
+  .navbar {
+    width: 100%;
+    height: 10px;
+  }
+  .topNavigation {
+    display: none;
+  }
+  .nav-contents {
+    display: none;
+  }
+
+  .hambur {
+    display: block;
+  }
+  .caro {
+    width: 100%;
+  }
+  .navbar {
+    padding: 20px;
+    height: 80px;
+  }
+  .head-div {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .hero-heading {
+    font-size: 15px;
+    letter-spacing: 5px;
+  }
+  .text-light {
+    font-size: 25px;
+  }
+  .form {
+    position: absolute;
+    top: 82%;
+    width: 96%;
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid green;
+    z-index: 10;
+    height: fit-content;
+  }
+
+  .caro-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+  .form > h1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .input-cards,
+  .input-cards-low {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-cards > div,
+  .input-cards-low > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .first-input,
+  .second-input {
+    width: 100%;
+  }
+  .btn-form {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .sidebars {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    z-index: 100;
+  }
+
+  .second-setion {
+    width: 100%;
+  }
+  .card-heading {
+    font-size: 35px;
+    padding-top: 30px;
+  }
+  .allCards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 100px;
+  }
+  .card {
+    position: relative;
+    width: 100%;
+    transform: scale(0.9);
+  }
+  .card-image {
+    position: absolute;
+    top: -120px;
+    width: 95%;
+  }
+  .head-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-btn {
+    width: 60%;
+  }
+  .card {
+    margin-top: 50px;
+  }
+  .btn {
+    width: 150px;
+    height: 50px;
+  }
+  .logo-arrow {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-brand > h1 {
     font-size: 22px;
