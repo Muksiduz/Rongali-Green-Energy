@@ -1,0 +1,524 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.caro {
+  height: 80vh;
+}
+.head-div {
+  width: 60%;
+}
+a {
+  text-decoration: none;
+}
+.hero-heading {
+  text-align: center;
+  color: rgb(42, 170, 42);
+  font-size: 34px;
+  letter-spacing: 10px;
+}
+.hero-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.text-light {
+  text-align: center;
+  font-size: 45px;
+}
+.caro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-item {
+  height: 70vh;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black tint with 50% opacity */
+}
+.navbar {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.navbar-nav {
+  gap: 60px;
+}
+.top {
+  gap: 30px;
+}
+.d-flex {
+  align-items: center;
+  justify-content: center;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.hamburger {
+  width: 70px;
+  height: 70px;
+}
+.topNavigation {
+  height: 70px;
+  padding: 8px 0 10px;
+  position: relative;
+  background: black;
+  border-bottom: 5px solid #b31c1c;
+  z-index: 1;
+}
+.topNavigation::before {
+  content: "";
+  position: absolute;
+  background: #1c7e32;
+  border-radius: 0 50px 0 0;
+  border-right: 15px solid #fff;
+  width: 10%;
+  top: 0;
+  left: 0;
+  bottom: -1px;
+  z-index: -1;
+}
+.topNavigation::after {
+  content: "";
+  position: absolute;
+  background: #1c7e32;
+  border-radius: 50px 0 0 0;
+  border-left: 15px solid #fff;
+  width: 10%;
+  top: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: -1;
+}
+.navbar-nav {
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid white; */
+  gap: 2px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+.side-logo-nav {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  list-style: none;
+  color: white;
+}
+.about-us {
+  margin-top: 100px;
+}
+.content-side {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+#contactUs {
+  margin-top: 100px;
+}
+.sidebars {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+.side-log {
+  width: 70px;
+  height: 70px;
+}
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0px;
+}
+.form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -400px;
+  width: 70%;
+  background: white;
+  padding: 50px;
+  border-radius: 24px;
+  border: 1px solid green;
+}
+.form > h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.form > h1 > span {
+  color: green;
+}
+.input-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.first-input {
+  width: 100%;
+  height: 60px;
+  border-radius: 14px;
+  border: 1px solid gray;
+}
+.btn-lg {
+  width: 100%;
+}
+label {
+  font-size: 22px;
+  font-weight: 600;
+}
+.btn {
+  background-color: rgb(12, 236, 12);
+  color: black;
+  border-radius: 44px;
+  padding: 20px;
+  border: none;
+  font-weight: bolder;
+  width: 200px;
+}
+.second-input {
+  width: 200px;
+  height: 60px;
+  border-radius: 14px;
+  border: 1px solid gray;
+}
+.input-cards-low {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.bike-btn {
+  width: 250px;
+  height: 70px;
+}
+.logo-arrow {
+  width: 40px;
+  height: 30px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+.call-now {
+  background: white;
+}
+.btn:hover {
+  background: rgb(153, 152, 152);
+  color: white;
+}
+.large-icon {
+  width: 100px;
+  height: 100px;
+  background: rgb(0, 253, 0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.phone {
+  background: black;
+  border: 2px solid white;
+}
+.hambur {
+  display: none;
+}
+.second-setion {
+  background-color: #f0dddd;
+  margin-top: 450px;
+  width: 100%;
+  padding: 30px 200px;
+}
+input::placeholder {
+  font-size: 22px;
+  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .topNavigation {
+    display: none;
+  }
+  .nav-contents {
+    display: none;
+  }
+
+  .hambur {
+    display: block;
+  }
+  .navbar {
+    padding: 20px;
+    height: 100px;
+  }
+  .head-div {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .hero-heading {
+    font-size: 25px;
+    letter-spacing: 5px;
+  }
+  .text-light {
+    font-size: 35px;
+  }
+  .form {
+    position: absolute;
+    top: 82%;
+    width: 96%;
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid green;
+    z-index: 10;
+    height: fit-content;
+  }
+  .caro-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .form > h1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .input-cards,
+  .input-cards-low {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-cards > div,
+  .input-cards-low > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .first-input,
+  .second-input {
+    width: 100%;
+  }
+  .btn-form {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .sidebars {
+    z-index: 100;
+  }
+}
+
+/* card css  */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  /* overflow: hidden; */
+  max-width: 450px;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 200px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image {
+  width: 90%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 17px;
+}
+
+.card-content {
+  padding: 20px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.card-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #5751d9;
+}
+.card-btn {
+  display: flex;
+  gap: 5px;
+}
+
+.allCards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  gap: 50px;
+  margin-bottom: 100px;
+  padding-top: 100px;
+}
+.card-heading {
+  text-align: center;
+  font-size: 64px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+}
+@media (max-width: 768px) {
+  .second-setion {
+    position: relative;
+    margin-top: 400px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 100px;
+    height: auto;
+  }
+  .allCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.container {
+  width: 100%;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+}
+.testimonial-card img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.testimonial-text {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+.testimonial-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #555;
+}
+.testimonial-role {
+  font-size: 0.9rem;
+  color: #777;
+}
+.testimonial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 100px;
+}
+.testimonial-section {
+  padding: 50px;
+  background: #000;
+}
+.testimonial-section > h1 {
+  color: white;
+  text-align: center;
+  font-size: 54px;
+}
+.price {
+  font-weight: bolder;
+  color: red;
+}
+.price > span {
+  color: rgb(22, 88, 231);
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-brand > h1 {
+  font-size: 22px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+}
+@media (max-width: 768px) {
+  .navbar-brand > h1 {
+    font-size: 22px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+  }
+  .company-logo {
+    width: 50px;
+  }
+}
+.company-logo {
+  width: 150px;
+  height: 80px;
+}
+.btn-lg {
+  width: 100%;
+  margin-top: 10px;
+}
