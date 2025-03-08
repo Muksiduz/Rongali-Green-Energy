@@ -43,28 +43,32 @@ hamburger.addEventListener("click", () => {
 
 //emailJS
 emailjs.init("XDCXVtY69gfO-NRRe");
-// service_1vfakrb
-// private key : yc4fU3pfhqg_tE51tuJXs
-// public key : XDCXVtY69gfO-NRRe
-emailjs.send("service_1vfakrb", "template_92htiej");
 
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
-
   // Collect form data
   const formData = {
     name: document.getElementById("name").value,
     number: document.getElementById("number").value,
     email: document.getElementById("email").value,
   };
+  if (formData.name === "" || formData.number === "" || formData.email === "") {
+    return;
+  }
+  if (formData.number < 10) return;
 
-  // Send email using EmailJS
   emailjs
-    .send("service_1vfakrb", "template_92htiej", formData)
-    .then(function (response) {
-      alert("Message sent successfully!");
+    .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+      name: formData.name,
+      number: formData.number,
+      email: formData.email,
     })
-    .catch(function (error) {
-      alert("Failed to send message.");
-    });
+    .then(
+      function (response) {
+        alert("Message sent successfully!");
+      },
+      function (error) {
+        alert("Failed to send message.");
+      }
+    );
 });
