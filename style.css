@@ -528,9 +528,16 @@ input::placeholder {
   color: rgb(7, 148, 7);
 }
 
+.nav-hambuger {
+  display: none;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .main-container {
     width: 100%;
+  }
+  .nav-hambuger {
+    display: block;
   }
   .company-logo {
     width: 100px;
