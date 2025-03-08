@@ -20,7 +20,7 @@
     <div class="main-container">
       <a
         class="sidebar"
-        href="https://wa.me/9401300340?text=Hello!%20I'm%20Momin%20,%20Director%20of%20[Company%20Name].%20Let's%20discuss%20how%20solar%20energy%20can%20benefit%20you."
+        href="https://wa.me/919401300340?text=Hello!%20I'm%20Momin%20,%20Director%20of%20[Company%20Name].%20Let's%20discuss%20how%20solar%20energy%20can%20benefit%20you."
       >
         <img src="/icons8-whatsapp-48.png" alt="" class="side-log" />
       </a>
@@ -82,11 +82,7 @@
         <nav class="navbar">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
-              <img
-                src="/rongalilogo.png"
-                alt="Logo"
-                class="d-inline-block align-text-top company-logo"
-              />
+              <h1 class="logo-green">Rongali</h1>
             </a>
             <div class="nav-contents">
               <ul class="navbar-nav d-flex flex-row">
@@ -123,14 +119,21 @@
                 </li>
               </ul>
             </div>
-            <div>
-              <a class="nav-link hambur" aria-current="page" href="#">
-                <img
-                  src="https://static.vecteezy.com/system/resources/previews/021/190/402/non_2x/hamburger-menu-filled-icon-in-transparent-background-basic-app-and-web-ui-bold-line-icon-eps10-free-vector.jpg"
-                  alt=""
-                  class="hamburger"
-                />
-              </a>
+            <div class="nav-hambuger">
+              <button class="hamburger" aria-label="Toggle menu">☰</button>
+              <ul class="nav-links-ham">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services & products</a></li>
+                <li>
+                  <a class="nav-link active" aria-current="page" href="#form">
+                    <button type="button" class="btn bike-btn btn-primary">
+                      GET QUOTE
+                    </button>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </nav>
@@ -276,7 +279,7 @@
           </div>
         </div>
 
-        <div id="form" class="form">
+        <form id="form" class="form">
           <h1>
             Book Your
             <span>Quote</span>
@@ -309,11 +312,11 @@
                 placeholder="Email"
               />
             </div>
-            <button id="button" type="button" class="btn btn-lg">
+            <button id="button" type="submit" class="btn btn-lg">
               GET QUOTE <img src="/arrow.png" alt="" class="logo" />
             </button>
           </div>
-        </div>
+        </form>
       </div>
       <div id="products" class="second-setion">
         <!-- for all the card-  -->
@@ -504,6 +507,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <script src="app.js"></script>
   </body>
 </html>

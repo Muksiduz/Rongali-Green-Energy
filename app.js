@@ -32,18 +32,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateCarousel();
 });
+//hamburger
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links-ham");
 
-// for the email send to the owner
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  hamburger.classList.toggle("open");
+});
 
-const name = document.getElementById("name").value;
-const email = document.getElementById("email").value;
-const number = document.getElementById("number").value;
-const button = document.getElementById("button");
+//emailJS
+emailjs.init("XDCXVtY69gfO-NRRe");
+// service_1vfakrb
+// private key : yc4fU3pfhqg_tE51tuJXs
+// public key : XDCXVtY69gfO-NRRe
+emailjs.send("service_1vfakrb", "template_92htiej");
 
-// Create mailto link
-const mailtoLink = `mailto:muksiduz@gmail.com?subject=New%20Contact%20Form%20Submission&body=Name:%20${name}%0AEmail:%20${email}%0AMessage:%20${message}`;
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-button.addEventListener("click", () => {
-  // Open default email client
-  window.location.href = mailtoLink;
+  // Collect form data
+  const formData = {
+    name: document.getElementById("name").value,
+    number: document.getElementById("number").value,
+    email: document.getElementById("email").value,
+  };
+
+  // Send email using EmailJS
+  emailjs
+    .send("service_1vfakrb", "template_92htiej", formData)
+    .then(function (response) {
+      alert("Message sent successfully!");
+      console.log("SUCCESS!", response);
+    })
+    .catch(function (error) {
+      alert("Failed to send message.");
+      console.error("FAILED...", error);
+    });
 });

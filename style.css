@@ -122,7 +122,7 @@ a {
   z-index: -1;
 }
 .navbar-nav {
-  color: white;
+  color: whitesmoke;
   display: flex;
   flex-direction: row;
 }
@@ -385,6 +385,119 @@ input::placeholder {
   gap: 20px;
   margin-top: 100px;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  color: rgb(15, 15, 15);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+.nav-links-ham {
+  list-style: none;
+  font-size: 20px;
+  padding-top: 30px;
+}
+.nav-links-ham > li {
+  margin-top: 10px;
+}
+.nav-links-ham > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+  .nav-hamburger {
+    position: relative;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links-ham {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+
+    backdrop-filter: blur(100px);
+    position: absolute;
+    width: 70vw;
+    height: 50vh;
+    top: 100px;
+    right: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease-in-out;
+    border-bottom: 1px solid #ddd;
+    z-index: 200;
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Hamburger icon to "X" animation */
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+
+  height: 3px;
+  width: 30px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open::before {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 .testimonial-section {
   padding: 50px;
   background: #000;
@@ -411,12 +524,13 @@ input::placeholder {
   font-weight: bolder;
   letter-spacing: 5px;
 }
+.logo-green {
+  color: rgb(7, 148, 7);
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .main-container {
     width: 100%;
-
-    /* overflow: hidden; */
   }
   .company-logo {
     width: 100px;
@@ -568,4 +682,7 @@ input::placeholder {
 .btn-lg {
   width: 100%;
   margin-top: 10px;
+}
+input {
+  padding-left: 20px;
 }
