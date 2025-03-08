@@ -330,13 +330,6 @@ input::placeholder {
   gap: 5px;
 }
 
-.allCards {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 50px;
-  margin: 100px 0;
-}
 .card-heading {
   text-align: center;
   font-size: 64px;
@@ -440,42 +433,12 @@ input::placeholder {
   text-decoration: none;
   color: white;
 }
-
-/* For small screens */
-@media (max-width: 768px) {
-  .nav-hamburger {
-    position: relative;
-  }
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links-ham {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    align-items: center;
-
-    backdrop-filter: blur(100px);
-    position: absolute;
-    width: 70vw;
-    height: 50vh;
-    top: 100px;
-    right: 0;
-    transform: translateY(-20px);
-    transition: all 0.4s ease-in-out;
-    border-bottom: 1px solid #ddd;
-    z-index: 200;
-    display: none;
-  }
-
-  .active {
-    display: block;
-  }
-
-  .nav-links li {
-    margin-bottom: 1rem;
-  }
+.allCards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 50px;
+  margin: 100px 0;
 }
 
 /* Hamburger icon to "X" animation */
@@ -577,7 +540,7 @@ input::placeholder {
   }
   .form {
     position: absolute;
-    top: 100%;
+    top: 120%;
     width: 96%;
     background: white;
     padding: 30px;
