@@ -63,10 +63,8 @@ document.getElementById("form").addEventListener("submit", function (event) {
     .send("service_1vfakrb", "template_92htiej", formData)
     .then(function (response) {
       alert("Message sent successfully!");
-      console.log("SUCCESS!", response);
     })
     .catch(function (error) {
       alert("Failed to send message.");
-      console.error("FAILED...", error);
     });
 });
