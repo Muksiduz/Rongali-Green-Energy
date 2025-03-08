@@ -170,9 +170,7 @@ a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
   bottom: -80%;
-
   width: 70%;
   background: white;
   padding: 50px;
@@ -436,43 +434,6 @@ input::placeholder {
   color: white;
 }
 
-/* For small screens */
-@media (max-width: 768px) {
-  .nav-hamburger {
-    position: relative;
-  }
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links-ham {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    align-items: center;
-
-    backdrop-filter: blur(100px);
-    position: absolute;
-    width: 70vw;
-    height: 50vh;
-    top: 100px;
-    right: 0;
-    transform: translateY(-20px);
-    transition: all 0.4s ease-in-out;
-    border-bottom: 1px solid #ddd;
-    z-index: 200;
-    display: none;
-  }
-
-  .active {
-    display: block;
-  }
-
-  .nav-links li {
-    margin-bottom: 1rem;
-  }
-}
-
 /* Hamburger icon to "X" animation */
 .hamburger::before,
 .hamburger::after {
@@ -528,6 +489,39 @@ input::placeholder {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .nav-hamburger {
+    position: relative;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links-ham {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+
+    backdrop-filter: blur(100px);
+    position: absolute;
+    width: 70vw;
+    height: 50vh;
+    top: 100px;
+    right: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease-in-out;
+    border-bottom: 1px solid #ddd;
+    z-index: 200;
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
   .main-container {
     width: 100%;
   }
@@ -572,14 +566,14 @@ input::placeholder {
   }
   .form {
     position: absolute;
-    top: 100%;
-    width: 96%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -70%;
+    width: 98%;
     background: white;
-    padding: 30px;
+    padding: 50px;
     border-radius: 24px;
     border: 1px solid green;
-    z-index: 10;
-    height: fit-content;
   }
 
   .caro-img {
@@ -609,6 +603,7 @@ input::placeholder {
   .second-input {
     width: 100%;
   }
+
   .btn-form {
     width: 100%;
     margin-top: 20px;
@@ -633,13 +628,14 @@ input::placeholder {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
     padding-top: 100px;
   }
   .card {
     position: relative;
     width: 100%;
-    transform: scale(0.9);
+    margin-bottom: 100px;
+    transform: none;
+    /* transform: scale(0.9); */
   }
   .card-image {
     position: absolute;
