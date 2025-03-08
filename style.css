@@ -487,6 +487,15 @@ input::placeholder {
 .nav-hambuger {
   display: none;
 }
+.allCards {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 100px;
+}
+.card-heading {
+  padding: 50px;
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .nav-hamburger {
