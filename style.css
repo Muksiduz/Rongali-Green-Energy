@@ -170,7 +170,9 @@ a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -400px;
+
+  bottom: -80%;
+
   width: 70%;
   background: white;
   padding: 50px;
@@ -433,12 +435,42 @@ input::placeholder {
   text-decoration: none;
   color: white;
 }
-.allCards {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 50px;
-  margin: 100px 0;
+
+/* For small screens */
+@media (max-width: 768px) {
+  .nav-hamburger {
+    position: relative;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links-ham {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+
+    backdrop-filter: blur(100px);
+    position: absolute;
+    width: 70vw;
+    height: 50vh;
+    top: 100px;
+    right: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease-in-out;
+    border-bottom: 1px solid #ddd;
+    z-index: 200;
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
 }
 
 /* Hamburger icon to "X" animation */
@@ -540,7 +572,7 @@ input::placeholder {
   }
   .form {
     position: absolute;
-    top: 120%;
+    top: 100%;
     width: 96%;
     background: white;
     padding: 30px;
